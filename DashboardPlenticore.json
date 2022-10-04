@@ -1,0 +1,4108 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 1,
+  "id": 3,
+  "iteration": 1664888092699,
+  "links": [
+    {
+      "asDropdown": false,
+      "icon": "doc",
+      "includeVars": true,
+      "keepTime": true,
+      "tags": [],
+      "targetBlank": true,
+      "title": "Report",
+      "tooltip": "",
+      "type": "link",
+      "url": "http://localhost:8686/api/v7/report/NgomHmFZz"
+    }
+  ],
+  "panels": [
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#C4162A"
+      ],
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 10000,
+        "minValue": -10000,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 0,
+        "y": 0
+      },
+      "id": 21,
+      "interval": null,
+      "links": [],
+      "mappingType": 2,
+      "mappingTypes": [
+        {
+          "$$hashKey": "object:4427",
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "$$hashKey": "object:4428",
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "pluginVersion": "6.2.5",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "$$hashKey": "object:4430",
+          "from": "-100000",
+          "text": "Einspeisung",
+          "to": "1"
+        },
+        {
+          "$$hashKey": "object:4431",
+          "from": "1.1",
+          "text": "Bezug",
+          "to": "10000"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            }
+          ],
+          "limit": "",
+          "measurement": "plenticore.0.devices.local.HomeGrid_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "1,1.1",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Stromfluss",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#5794F2",
+        "rgba(237, 129, 40, 0.89)",
+        "#299c46"
+      ],
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 10000,
+        "minValue": -10000,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 4,
+        "y": 0
+      },
+      "id": 22,
+      "interval": null,
+      "links": [],
+      "mappingType": 2,
+      "mappingTypes": [
+        {
+          "$$hashKey": "object:2522",
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "$$hashKey": "object:2523",
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "pluginVersion": "6.2.5",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "$$hashKey": "object:2525",
+          "from": "0.01",
+          "text": "Erzeugung",
+          "to": "10000"
+        },
+        {
+          "$$hashKey": "object:2526",
+          "from": "0",
+          "text": "Inaktiv",
+          "to": "0.01"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "limit": "",
+          "measurement": "plenticore.0.devices.local.Pv_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "0,0.01",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Erzeugung",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#5794F2"
+      ],
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 10000,
+        "minValue": -10000,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 8,
+        "y": 0
+      },
+      "id": 23,
+      "interval": null,
+      "links": [],
+      "mappingType": 2,
+      "mappingTypes": [
+        {
+          "$$hashKey": "object:1332",
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "$$hashKey": "object:1333",
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "pluginVersion": "6.2.5",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "$$hashKey": "object:1335",
+          "from": "-10000",
+          "text": "Laden",
+          "to": "-5"
+        },
+        {
+          "$$hashKey": "object:1336",
+          "from": "5",
+          "text": "Entladen",
+          "to": "10000"
+        },
+        {
+          "$$hashKey": "object:1337",
+          "from": "-5",
+          "text": "inaktiv",
+          "to": "5"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "limit": "",
+          "measurement": "plenticore.0.devices.local.battery.P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "0,5",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Batterie",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#299c46",
+        "rgba(237, 129, 40, 0.89)",
+        "#C4162A"
+      ],
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "watt",
+      "gauge": {
+        "maxValue": null,
+        "minValue": null,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 12,
+        "y": 0
+      },
+      "id": 19,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Westen / hinten",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.Home_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT (last(\"Power DC1\") + last(\"Power DC2\")) FROM \"modbus.HoldingRegister\" WHERE $timeFilter GROUP BY time($__interval*4) fill(null)",
+          "rawQuery": false,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Osten / vorne",
+          "groupBy": [
+            {
+              "params": [
+                "5m"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": true,
+          "measurement": "modbus.HoldingRegister",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Power DC2"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "500,1000,2000",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Verbrauch",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#d44a3a",
+        "rgba(237, 129, 40, 0.89)",
+        "#299c46"
+      ],
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "watt",
+      "gauge": {
+        "maxValue": 9900,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 15,
+        "y": 0
+      },
+      "id": 37,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "$$hashKey": "object:2366",
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "$$hashKey": "object:2367",
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "alias": "Westen / hinten",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.Pv_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT (last(\"Power DC1\") + last(\"Power DC2\")) FROM \"modbus.HoldingRegister\" WHERE $timeFilter GROUP BY time($__interval*4) fill(null)",
+          "rawQuery": false,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Osten / vorne",
+          "groupBy": [
+            {
+              "params": [
+                "5m"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": true,
+          "measurement": "modbus.HoldingRegister",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Power DC2"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "300,2000,9900",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Erzeugung",
+      "type": "singlestat",
+      "valueFontSize": "70%",
+      "valueMaps": [],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 500
+              },
+              {
+                "color": "dark-red",
+                "value": 1000
+              }
+            ]
+          },
+          "unit": "watt"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 18,
+        "y": 0
+      },
+      "id": 49,
+      "interval": null,
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "value"
+      },
+      "pluginVersion": "7.5.6",
+      "targets": [
+        {
+          "alias": "Westen / hinten",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.battery.P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT (last(\"Power DC1\") + last(\"Power DC2\")) FROM \"modbus.HoldingRegister\" WHERE $timeFilter GROUP BY time($__interval*4) fill(null)",
+          "rawQuery": false,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Osten / vorne",
+          "groupBy": [
+            {
+              "params": [
+                "5m"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": true,
+          "measurement": "modbus.HoldingRegister",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Power DC2"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Batterieleistung aktuell",
+      "type": "stat"
+    },
+    {
+      "cacheTimeout": null,
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "orange",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 30
+              },
+              {
+                "color": "green",
+                "value": 100
+              }
+            ]
+          },
+          "unit": "%"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 21,
+        "y": 0
+      },
+      "id": 48,
+      "interval": null,
+      "links": [],
+      "maxDataPoints": 100,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "value"
+      },
+      "pluginVersion": "7.5.6",
+      "targets": [
+        {
+          "alias": "Westen / hinten",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.battery.SoC",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT (last(\"Power DC1\") + last(\"Power DC2\")) FROM \"modbus.HoldingRegister\" WHERE $timeFilter GROUP BY time($__interval*4) fill(null)",
+          "rawQuery": false,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Osten / vorne",
+          "groupBy": [
+            {
+              "params": [
+                "5m"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": true,
+          "measurement": "modbus.HoldingRegister",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Power DC2"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Batterie Ladezustand",
+      "type": "stat"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#d44a3a",
+        "rgba(237, 129, 40, 0.89)",
+        "#299c46"
+      ],
+      "datasource": "InfluxDB",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 0,
+        "y": 4
+      },
+      "id": 2,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "pluginVersion": "6.2.5",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.AutarkyDay",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "5,50",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Autarkie Heute",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#d44a3a",
+        "rgba(237, 129, 40, 0.89)",
+        "#299c46"
+      ],
+      "datasource": "InfluxDB",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 3,
+        "y": 4
+      },
+      "id": 41,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "$$hashKey": "object:394",
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "$$hashKey": "object:395",
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "pluginVersion": "6.2.5",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.AutarkyMonth",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "5,50",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Autarkie Monat",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "$$hashKey": "object:397",
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#d44a3a",
+        "rgba(237, 129, 40, 0.89)",
+        "#299c46"
+      ],
+      "datasource": "InfluxDB",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 6,
+        "y": 4
+      },
+      "id": 39,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "pluginVersion": "6.2.5",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.AutarkyYear",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "5,50",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Autarkie aktuelles Jahr",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#d44a3a",
+        "rgba(237, 129, 40, 0.89)",
+        "#299c46"
+      ],
+      "datasource": "InfluxDB",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 9,
+        "y": 4
+      },
+      "id": 40,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "pluginVersion": "6.2.5",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.AutarkyYear",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "5,50",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Autarkie Gesamt",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {
+        "Batterie": "#1F60C4",
+        "Netz": "#888888",
+        "PV": "#56A64B"
+      },
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": 0
+      },
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "watth",
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 12,
+        "y": 4
+      },
+      "id": 34,
+      "interval": "1d",
+      "legend": {
+        "percentage": true,
+        "show": true,
+        "values": false
+      },
+      "legendType": "Right side",
+      "links": [],
+      "maxDataPoints": 3,
+      "nullPointMode": "connected",
+      "pieType": "pie",
+      "strokeWidth": "1",
+      "targets": [
+        {
+          "alias": "PV",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.HomeOwn_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Batterie",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.HomeBat_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Netz",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.HomeGrid_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": "1d/d",
+      "timeShift": null,
+      "title": "Hausverbrauch",
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "%"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 16,
+        "y": 4
+      },
+      "hiddenSeries": false,
+      "id": 50,
+      "interval": "1d",
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": false,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.6",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:3183",
+          "alias": "Daily yield",
+          "color": "#37872D"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Daily yield",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.AutarkyDay",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [],
+          "tz": "Europe/Berlin"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": "1M",
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Autarkie",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:3190",
+          "format": "%",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:3191",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#d44a3a",
+        "rgba(237, 129, 40, 0.89)",
+        "#299c46"
+      ],
+      "datasource": "InfluxDB",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 0,
+        "y": 8
+      },
+      "id": 38,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "$$hashKey": "object:1492",
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "$$hashKey": "object:1493",
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "pluginVersion": "6.2.5",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.OwnConsumptionRateDay",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Eigenverbauch Heute",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "$$hashKey": "object:1495",
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#d44a3a",
+        "rgba(237, 129, 40, 0.89)",
+        "#299c46"
+      ],
+      "datasource": "InfluxDB",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 3,
+        "y": 8
+      },
+      "id": 42,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "$$hashKey": "object:1492",
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "$$hashKey": "object:1493",
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "pluginVersion": "6.2.5",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.OwnConsumptionRateMonth",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Eigenverbauch aktueller Monat",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "$$hashKey": "object:1495",
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#d44a3a",
+        "rgba(237, 129, 40, 0.89)",
+        "#299c46"
+      ],
+      "datasource": "InfluxDB",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 6,
+        "y": 8
+      },
+      "id": 43,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "$$hashKey": "object:1492",
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "$$hashKey": "object:1493",
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "pluginVersion": "6.2.5",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.OwnConsumptionRateYear",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Eigenverbauch aktuelles Jahr",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "$$hashKey": "object:1495",
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorValue": false,
+      "colors": [
+        "#d44a3a",
+        "rgba(237, 129, 40, 0.89)",
+        "#299c46"
+      ],
+      "datasource": "InfluxDB",
+      "description": "",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "percent",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": true,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 9,
+        "y": 8
+      },
+      "id": 44,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "$$hashKey": "object:1492",
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "$$hashKey": "object:1493",
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "pluginVersion": "6.2.5",
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": true,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.OwnConsumptionRateTotal",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Eigenverbauch Gesamt",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "$$hashKey": "object:1495",
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "kWh"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 12,
+        "y": 8
+      },
+      "id": 47,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.5.6",
+      "targets": [
+        {
+          "alias": "Gesamtausgaben",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.YieldTotal",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              },
+              {
+                "params": [
+                  "/1000"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Total Erzeugt",
+      "type": "stat"
+    },
+    {
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "currencyEUR"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 16,
+        "y": 8
+      },
+      "id": 46,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.5.6",
+      "targets": [
+        {
+          "alias": "Gesamteinnahmen",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.EnergyToGridYear",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              },
+              {
+                "params": [
+                  "/1000 *0.0769"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Gesamteinnahmen 2021",
+      "type": "stat"
+    },
+    {
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "currencyEUR"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 4,
+        "x": 20,
+        "y": 8
+      },
+      "id": 52,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.5.6",
+      "targets": [
+        {
+          "alias": "Gesamtausgaben",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.EnergyHomeGridYear",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              },
+              {
+                "params": [
+                  "/1000 *0.2610"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Gesamtkosten 2021",
+      "type": "stat"
+    },
+    {
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "graph": false,
+              "legend": false,
+              "tooltip": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true
+          },
+          "mappings": [],
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "watt"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 12
+      },
+      "id": 6,
+      "links": [],
+      "options": {
+        "graph": {},
+        "legend": {
+          "calcs": [
+            "max",
+            "min"
+          ],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltipOptions": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "7.5.6",
+      "targets": [
+        {
+          "alias": "String 1",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.pv1.P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "String 2",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.pv2.P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Erzeugung",
+      "type": "timeseries"
+    },
+    {
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "watt"
+        },
+        "overrides": []
+      },
+      "fill": 5,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 8,
+        "y": 12
+      },
+      "hiddenSeries": false,
+      "id": 25,
+      "interval": "1m",
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": false,
+      "linewidth": 0,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.6",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:876",
+          "alias": "Batterie laden",
+          "color": "#8AB8FF"
+        },
+        {
+          "$$hashKey": "object:877",
+          "alias": "Batterie entladen",
+          "color": "#1F60C4"
+        },
+        {
+          "$$hashKey": "object:878",
+          "alias": "Netzbezug",
+          "color": "#888888"
+        },
+        {
+          "$$hashKey": "object:879",
+          "alias": "Direktverbrauch",
+          "color": "#56A64B"
+        },
+        {
+          "$$hashKey": "object:880",
+          "alias": "Netzeinspeisung",
+          "color": "#FF780A"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": true,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Batterie entladen",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            }
+          ],
+          "hide": false,
+          "measurement": "plenticore.0.devices.local.battery.Discharge_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT mean(\"Current battery charge-discharge power\") * -1  FROM \"modbus.HoldingRegister\" WHERE \"Current battery charge-discharge power\" < 0 AND $timeFilter GROUP BY time($__interval) fill(0)",
+          "rawQuery": false,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Batterie laden",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            }
+          ],
+          "hide": false,
+          "measurement": "plenticore.0.devices.local.battery.Charge_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT mean(\"Current battery charge-discharge power\")  FROM \"modbus.HoldingRegister\" WHERE \"Current battery charge-discharge power\" > 0 AND $timeFilter GROUP BY time($__interval) fill(0)",
+          "rawQuery": false,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Direktverbrauch",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.HomeOwn_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Netzbezug",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.HomeGrid_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "F",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Netzeinspeisung",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.ToGrid_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "H",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Hausverbrauch",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:911",
+          "format": "watt",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:912",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "watt"
+        },
+        "overrides": []
+      },
+      "fill": 4,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 16,
+        "y": 12
+      },
+      "hiddenSeries": false,
+      "id": 8,
+      "interval": "30s",
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": false,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.6",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:3675",
+          "alias": "PV",
+          "color": "#56A64B"
+        },
+        {
+          "$$hashKey": "object:3676",
+          "alias": "Speicher",
+          "color": "#1F60C4"
+        },
+        {
+          "$$hashKey": "object:3677",
+          "alias": "Netz",
+          "color": "#FF780A"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": true,
+      "steppedLine": true,
+      "targets": [
+        {
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": true,
+          "measurement": "modbus.HoldingRegister",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "Total AC active power"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "PV",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.HomePv_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Speicher",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.HomeBat_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "C",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Netz",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.HomeGrid_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT mean(\"Home own consumption from grid\") FROM \"modbus.HoldingRegister\" WHERE $timeFilter GROUP BY time($__interval) fill(null)",
+          "rawQuery": false,
+          "refId": "D",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Verbrauch nach Erzeuger",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:3696",
+          "format": "watt",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:3697",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "cacheTimeout": null,
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "graph": false,
+              "legend": false,
+              "tooltip": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": true
+          },
+          "mappings": [],
+          "max": 100,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 20
+      },
+      "id": 18,
+      "links": [],
+      "options": {
+        "graph": {},
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom"
+        },
+        "tooltipOptions": {
+          "mode": "single"
+        }
+      },
+      "pluginVersion": "7.5.6",
+      "targets": [
+        {
+          "alias": "Ladezustand",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.battery.SoC",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Batterie Ladezustand",
+      "type": "timeseries"
+    },
+    {
+      "aliasColors": {},
+      "bars": true,
+      "cacheTimeout": null,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 8,
+        "y": 20
+      },
+      "hiddenSeries": false,
+      "id": 31,
+      "interval": "1m",
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": false,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.6",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:3978",
+          "alias": "Laden",
+          "color": "#8AB8FF"
+        },
+        {
+          "$$hashKey": "object:3979",
+          "alias": "Entladen",
+          "color": "#1F60C4"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Laden",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "0"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.battery.Charge_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              },
+              {
+                "params": [
+                  "*-1"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Entladen",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.battery.Discharge_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Batterie Ladeleistung",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:3992",
+          "format": "watt",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:3993",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": true,
+      "cacheTimeout": null,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {
+          "unit": "watt"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 16,
+        "y": 20
+      },
+      "hiddenSeries": false,
+      "id": 32,
+      "interval": "1m",
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": false,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.6",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:3379",
+          "alias": "Bezug",
+          "color": "#C4162A"
+        },
+        {
+          "$$hashKey": "object:3380",
+          "alias": "Einspeisung",
+          "color": "#FF9830"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Einspeisung",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.ToGrid_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        },
+        {
+          "alias": "Bezug",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "plenticore.0.devices.local.HomeGrid_P",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              },
+              {
+                "params": [
+                  "*-1"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Netz Einspeisung/Bezug",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:3393",
+          "format": "watt",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:3394",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 0,
+        "y": 28
+      },
+      "hiddenSeries": false,
+      "id": 27,
+      "interval": "1d",
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": false,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.6",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:3183",
+          "alias": "Daily yield",
+          "color": "#37872D"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Daily yield",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "null"
+              ],
+              "type": "fill"
+            }
+          ],
+          "hide": false,
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.YieldDay",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "D",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": [],
+          "tz": "Europe/Berlin"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": "30d",
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Tägliche Erzeugung",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:3190",
+          "format": "watth",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": "0",
+          "show": true
+        },
+        {
+          "$$hashKey": "object:3191",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": true,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "InfluxDB",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 8,
+        "x": 8,
+        "y": 28
+      },
+      "hiddenSeries": false,
+      "id": 28,
+      "interval": "1d",
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": false,
+      "linewidth": 1,
+      "links": [],
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.6",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [
+        {
+          "$$hashKey": "object:2547",
+          "alias": "Ertrag Einspeisung",
+          "color": "#37872D"
+        },
+        {
+          "$$hashKey": "object:2548",
+          "alias": "Kosten Bezug",
+          "color": "#C4162A"
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Ertrag Einspeisung",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            }
+          ],
+          "hide": false,
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.EnergyToGridDay",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT sum(\"value\") / ((24 * 60 * 60) / count(\"value\")) / 24 / 7 / 1000 * 7.69 FROM \"plenticore.0.scb.statistic.EnergyFlow.EnergyToGridDay\" WHERE $timeFilter GROUP BY time(1w) tz('Europe/Berlin')",
+          "rawQuery": false,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              },
+              {
+                "params": [
+                  "/ 1000 * 0.0769"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": [],
+          "tz": "Europe/Berlin"
+        },
+        {
+          "alias": "Kosten Bezug",
+          "groupBy": [
+            {
+              "params": [
+                "1d"
+              ],
+              "type": "time"
+            }
+          ],
+          "hide": false,
+          "measurement": "plenticore.0.scb.statistic.EnergyFlow.EnergyHomeGridDay",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT mean(\"Total active power (powermeter)\") / -1000 * $kWEuro FROM \"modbus.HoldingRegister\" WHERE (\"Total active power (powermeter)\" < 0) AND $timeFilter GROUP BY time(1d) fill(null)",
+          "rawQuery": false,
+          "refId": "B",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              },
+              {
+                "params": [
+                  "/ -1000 * 0.2610"
+                ],
+                "type": "math"
+              }
+            ]
+          ],
+          "tags": [],
+          "tz": "Europe/Berlin"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": "1M",
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Kosten/Einnahmen pro Woche",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:2561",
+          "format": "currencyEUR",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:2562",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 27,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "current": {
+          "text": "0.1095",
+          "value": "0.1095"
+        },
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "label": "€/kWh Einspeisung",
+        "name": "kWEuroEinspeisung",
+        "options": [
+          {
+            "text": "0.1095",
+            "value": "0.1095"
+          }
+        ],
+        "query": "0.1095",
+        "skipUrlSync": false,
+        "type": "textbox"
+      },
+      {
+        "current": {
+          "text": "0.2775",
+          "value": "0.2775"
+        },
+        "description": null,
+        "error": null,
+        "hide": 2,
+        "label": "€/kWh Netzbezug",
+        "name": "kWEuroBezug",
+        "options": [
+          {
+            "text": "0.2775",
+            "value": "0.2775"
+          }
+        ],
+        "query": "0.2775",
+        "skipUrlSync": false,
+        "type": "textbox"
+      }
+    ]
+  },
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ],
+    "time_options": [
+      "5m",
+      "15m",
+      "1h",
+      "6h",
+      "12h",
+      "24h",
+      "2d",
+      "7d",
+      "30d"
+    ]
+  },
+  "timezone": "",
+  "title": "Kostal Plenticore Copy",
+  "uid": "YpLNvBV4k",
+  "version": 2
+}
